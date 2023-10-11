@@ -1,0 +1,538 @@
+@import "./../assets/vars";
+@import "./../assets/keyframes";
+@import "./../modules/nav";
+
+// BREAKPOINT LAPTOP
+@media (max-width: $ss_laptop) {
+	.container {
+		max-width: 880px;
+	}
+
+	.wrapper {
+		font-size: 15px;
+	}
+
+	.title {
+		font-size: 46px;
+		line-height: 64px;
+
+		&--products {
+			width: 366px;
+		}
+
+		&--benefits {
+			width: 237px;
+		}
+
+		&--life {
+			width: 315px;
+		}
+	}
+
+	.nav {
+		&__item {
+			&+& {
+				margin-left: 20px;
+			}
+
+			&--mob {
+				display: none;
+			}
+		}
+	}
+
+	.first-screen__inner video {
+		width: 100%;
+	}
+
+	.conditions {
+		position: relative;
+
+		&__bg-blue {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateY(-100px);
+		}
+
+		&__bg-pink {
+			position: absolute;
+			left: 0;
+			top: 200px;
+		}
+	}
+
+	.photo-card {
+		text-align: center;
+		width: 48%;
+
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(6) {
+			margin-top: 25px;
+		}
+
+		&__img-wrapper {
+			width: 100%;
+		}
+	}
+
+	.products {
+		&__inner {
+			padding: 150px 0 85px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__img-wrapper {
+			width: 420px;
+		}
+
+		&__text {
+			width: 47%;
+
+			& p {
+				margin-top: 20px;
+				font-size: 20px;
+			}
+		}
+	}
+
+	.click-type-slider__content {
+		width: 42%;
+	}
+
+	.click-type-slider__img-wrapper img {
+		width: 450px;
+		height: 450px;
+	}
+
+	.click-type-slider__img-wrapper--last img {
+		height: 320px;
+	}
+
+	.click-life-slider {
+		&__content {
+			width: 49%;
+		}
+
+		&__control {
+			margin-top: 25px;
+		}
+
+		&__title {
+			font-size: 32px;
+			line-height: 40px;
+		}
+	}
+}
+
+// BREAKPOINT TABLET
+@media (max-width: $ss_tablet) {
+	@include nav-module($color_primary, #fff);
+
+	.header {
+		&__inner{
+			padding: 20px 0;
+		}
+		&__logo {
+			order: -2;
+		}
+
+		&__btn {
+			order: -1;
+		}
+
+	}
+
+	.nav {
+		order: 3;
+		display: flex;
+		flex-direction: column;
+		z-index: 30;
+
+		& a {
+			color: #fff;
+		}
+
+		&-item {
+			background: none;
+
+			&+& {
+				margin-left: 0;
+			}
+
+			&::after {
+				display: none;
+			}
+
+			&:hover,
+			&:focus {
+				background: none;
+				color: #fff;
+			}
+
+			&--page {
+				display: none;
+			}
+		}
+	}
+
+	.wrapper {
+		font-size: 14px;
+	}
+
+	.title {
+		font-size: 36px;
+		line-height: 44px;
+
+		&--products {
+			width: 288px;
+		}
+
+		&--benefits {
+			width: 187px;
+		}
+
+		&--life {
+			width: 248px;
+		}
+	}
+
+	.container {
+		padding: 0 15px;
+	}
+
+	.benefits {
+		&__inner {
+			padding-top: 40px;
+		}
+
+		&__sub-title {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+
+	.icon-card {
+		width: 50%;
+
+		&:nth-child(3),
+		&:nth-child(4) {
+			margin-top: 20px;
+		}
+	}
+
+	.advantages {
+		padding: 100px 0;
+
+		&__inner {
+			flex-wrap: wrap;
+		}
+	}
+
+	.photo-card {
+
+		&__img-wrapper {
+			height: 67%;
+		}
+
+		&__title {
+			margin-top: 16px;
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+
+	.products {
+		&__inner {
+			padding: 70px 0 85px;
+		}
+
+		&__img-wrapper {
+			width: 350px;
+		}
+
+		&__text {
+			& p {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.click-type-slider {
+		&-slide {
+			flex-wrap: wrap;
+		}
+
+		&__img-wrapper {
+			padding-bottom: 20px;
+			width: 100%;
+
+			& img {
+				width: auto;
+				height: auto;
+			}
+
+			&--last img {
+				height: 396px;
+			}
+		}
+
+		&__content {
+			width: 100%;
+		}
+
+		&__bg-img {
+			transform: translateY(150px);
+		}
+
+		&__control {
+			margin-top: 25px;
+		}
+	}
+
+	.click-life-slider {
+		padding-top: 51px;
+
+		&__subtitle {
+			font-size: 14px;
+			width: 45%;
+			margin: 8px 0 24px;
+		}
+
+		&__content {
+			margin-top: 20px;
+			width: 100%;
+		}
+
+		&__img-wrapper {
+			width: 100%;
+		}
+
+		&__text {
+			width: 100%;
+		}
+	}
+
+	.gallery-slider__pagination {
+		margin-bottom: 30px;
+	}
+
+	.gallery-slider-arrow-prev,
+	.gallery-slider-arrow-next {
+		padding: 13px;
+	}
+
+	.gallery-slider {
+		&__arrows {
+			top: 40%;
+			width: 95%;
+		}
+	}
+}
+
+// BREAKPOINT SM TABLET
+@media (max-width: $ss_sm_tablet) {
+	.title {
+		font-size: 30px;
+		line-height: 44px;
+
+		&--products {
+			width: 240px;
+			border-bottom: 8px solid #00A0FF;
+		}
+
+		&--benefits {
+			width: 156px;
+			border-bottom: 8px solid #00A0FF;
+		}
+
+		&--life {
+			width: 208px;
+			border-bottom: 8px solid #00A0FF;
+		}
+	}
+
+	.first-video {
+		padding-bottom: 40px;
+	}
+
+	.icon-card__img {
+		width: 70px;
+		height: 70px;
+	}
+
+	.advantages {
+		padding: 80px 0;
+	}
+
+	.benefits {
+		padding: 40px 0 60px;
+	}
+
+	.photo-card__title {
+		font-size: 16px;
+	}
+
+	.products__img-wrapper {
+		width: 250px;
+		top: 90px;
+	}
+
+	.click-life-slider {
+		padding-top: 10px;
+
+		&__subtitle {
+			width: 100%;
+		}
+
+		&__title {
+			font-size: 28px;
+		}
+	}
+
+	.gallery-slider {
+		&__img-wrapper {
+			width: 100%;
+		}
+
+		&__arrows {
+			transform: translateY(-50%);
+			top: 96%;
+		}
+	}
+
+	.footer__btn {
+		width: 190px;
+	}
+}
+
+// BREAKPOINT PHONE
+@media (max-width: $ss_phone) {
+	.wrapper {
+		width: calc(100% + 30px);
+		margin: 0 -15px;
+	}
+
+	.title {
+		font-size: 24px;
+		line-height: 30px;
+
+		&--products {
+			width: 195px;
+		}
+
+		&--benefits {
+			width: 125px;
+		}
+
+		&--life {
+			width: 168px;
+		}
+	}
+
+	.header {
+		&__logo {
+			width: 70px;
+		}
+
+		&__btn {
+			padding: 5px 10px;
+		}
+	}
+
+	.video__play-btn {
+		font-size: 1.5em;
+	}
+
+	.advantages {
+		padding: 40px 0;
+	}
+
+	.icon-card__title {
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.photo-card {
+		width: 100%;
+
+		// &:nth-child(1) .photo-card__img-wrapper,
+		// &:nth-child(4) .photo-card__img-wrapper {
+		// 	height: 80%;
+		// }
+
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(6) {
+			margin-top: 30px;
+		}
+
+		&__img-wrapper {
+			height: 90%;
+		}
+
+		&__title {
+			margin-top: 10px;
+		}
+	}
+
+	.products {
+		&__img-wrapper {
+			width: 150px;
+			top: 300px;
+		}
+
+		&__text {
+			width: 100%;
+		}
+	}
+
+	.click-type-slider__img-wrapper--last img {
+		height: 250px;
+	}
+
+	.click-type-slider__pagination,
+	.click-life-slider__pagination {
+		font-size: 22px;
+	}
+
+	.click-type-slider__title {
+		font-size: 24px;
+		line-height: 50px;
+	}
+
+	.click-type-slider__control {
+		margin-top: 5px;
+	}
+
+	.click-life-slider__title {
+		font-size: 18px;
+	}
+
+	.gallery-slider__text {
+		margin: 12px 0 20px;
+		font-size: 16px;
+	}
+
+	.swiper-pagination-bullet {
+		margin: 0 4px;
+		width: 6px;
+		height: 6px;
+	}
+
+	.gallery-slider-arrow-prev,
+	.gallery-slider-arrow-next {
+		font-size: 2.6em;
+		padding: 11px;
+	}
+	.footer__btn {
+		padding: 8px 15px;
+		width: 160px;
+	}
+}

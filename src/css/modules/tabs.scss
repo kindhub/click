@@ -1,0 +1,33 @@
+.tab {
+	text-align: center;
+	display: none;
+
+	&--active {
+		display: block;
+	}
+
+	&-nav__item {
+		cursor: pointer;
+		font-weight: 500;
+		&--active {
+			color: #00A0FF;
+		}
+	}
+}
+
+.tab2 {
+	display: none;
+
+	&--active {
+		display: block;
+	}
+}
+
+.tab-nav__item2 {
+	cursor: pointer;
+	font-weight: 500;
+
+	&--active {
+		color: #00A0FF;
+	}
+}

@@ -1,0 +1,270 @@
+extends ./pug/layout
+
+block content
+	<!-- START HEADER -->
+	.section.header
+		.container
+			.header__inner
+				a.header__logo(href="#")
+					img.header__logo-img(src="https://hhcdn.ru/ichameleon/301094.svg")
+				.header__nav.nav
+					a.nav__item.anchor(href="#about") О компании
+					a.nav__item.anchor(href="#benefits") Бенефиты
+					a.nav__item.anchor(href="#products") Наши продукты
+					a.nav__item.anchor(href="#life") Жизнь в Click
+				.header__btn.vacancy-btn Смотреть вакансии
+				+nav-btn
+	<!-- END HEADER -->
+
+	<!-- START FIRST-SCREEN -->
+	.first-screen 
+		.first-screen__inner 
+			video(src='https://hhcdn.ru/file/17547472.mp4' autoplay='true' muted='true' loop='true' playsinline='true')
+	<!-- END FIRST-SCREEN -->
+
+	<!-- START FIRST-VIDEO -->
+	.section.first-video#about
+		.container 
+			.first-video__inner
+				.first-video__tabs 
+					.tab.tab-1
+						+video("YHdybZxv9oQ", "https://hhcdn.ru/ichameleon/301096.jpg")
+					.tab.tab-2 
+						+video("89b2_l9GUAk", "https://hhcdn.ru/ichameleon/301096.jpg")
+				.first-video__select 
+					.tab-nav__item(data-tab-name="tmpl-hh__tab-1") Русский
+					.tab-nav__item(data-tab-name="tmpl-hh__tab-2") O’zbekcha
+	<!-- END FIRST-VIDEO -->
+
+	<!-- START ADVANTAGES -->
+	.section.advantages
+		.container
+			.advantages__inner 
+				+icon-card('https://hhcdn.ru/ichameleon/301100.png', 'Более', '11 млн', 'пользователей')
+				+icon-card('https://hhcdn.ru/ichameleon/301099.png', 'Более', '11 млн', 'зарегистрированных <br> карт')
+				+icon-card('https://hhcdn.ru/ichameleon/301097.png', '<br>', '12', 'лет на рынке <br> Узбекистана')
+				+icon-card('https://hhcdn.ru/ichameleon/301098.png', 'Более', '350', 'сотрудников')
+	<!-- END ADVANTAGES -->
+
+	<!-- START BENEFITS -->
+	.section.benefits#benefits
+		.container 
+			.title.title--benefits Бенефиты
+			.benefits__sub-title Well being - это про Нас!
+			.benefits__inner
+				.benefits__tabs 
+					.tab2.tab2-1
+						+video("gD-82cmuMC8", "https://hhcdn.ru/ichameleon/304285.jpg")
+					.tab2.tab2-2 
+						+video("OmVSPVV6cto", "https://hhcdn.ru/ichameleon/304285.jpg")
+				.benefits__select 
+					.tab-nav__item2(data-tab-name2="tmpl-hh__tab2-1") Русский
+					.tab-nav__item2(data-tab-name2="tmpl-hh__tab2-2") O’zbekcha
+	<!-- END BENEFITS -->
+
+	<!-- START CONDITIONS -->
+	.section.conditions 
+		.conditions__bg-blue 
+			img(src="https://hhcdn.ru/ichameleon/301093.png")
+		.conditions__bg-pink 
+			img(src="https://hhcdn.ru/ichameleon/301092.png")
+		.container
+			.conditions__inner 
+				+photo-card('https://hhcdn.ru/file/17547475.png', 'Работай в современном офисе')
+				+photo-card('https://hhcdn.ru/file/17547478.png', 'Выбирай гибкий график')
+				+photo-card('https://hhcdn.ru/ichameleon/301090.png', 'Занимайся интересными проектами')
+				+photo-card('https://hhcdn.ru/file/17547477.png', 'Живи яркой корпоративной жизнью')
+				+photo-card('https://hhcdn.ru/ichameleon/301091.png', 'Прокачай английский язык')
+				+photo-card('https://hhcdn.ru/ichameleon/301089.png', 'Будь всегда в форме')
+	<!-- END CONDITIONS -->
+
+	<!-- START PRODUCTS -->
+	.section.products#products
+		.products__img-wrapper 
+			img(src="https://hhcdn.ru/file/17547484.png")
+		.container
+			.products__inner 
+				.products__text-wrapper
+					.title.title--products Наши продукты
+					.products__text 
+						p Click Up – приложение для переводов, оплат, покупки билетов, онлайн-страхования и многого другого.
+						p Click Start – первый шаг к финансовой грамотности детей и подростков.
+						p Click Market – интернет-магазин фирменной продукции.
+	<!-- END PRODUCTS -->
+
+	<!-- START CLICK-TYPE -->
+	.section.click-type-slider
+		.container 
+			.click-type-slider__bg-img 
+				img(src="https://hhcdn.ru/ichameleon/301101.png")
+			.swiper-container.click-type-slider__inner 
+				.swiper-wrapper
+					.swiper-slide.click-type-slider-slide
+						.click-type-slider__content 
+							.click-type-slider__title Click Up
+							.click-type-slider__text 
+								p Click Up – платёжное приложение, которое позволяет переводить средства, оплачивать мобильную связь, коммунальные услуги, госплатежи, погашать кредиты и совершать множество других денежных операций.
+							.click-type-slider__control 
+								.click-type-slider__pagination
+								.slider-arrows.click-type-slider-arrows
+									.slider-arrow.slider-arrow--prev.click-type-slider-arrow-prev
+										+icon("arrow-left", "slider-arrow__icon")
+									.slider-arrow.slider-arrow--next.click-type-slider-arrow-next
+										+icon("arrow-right", "slider-arrow__icon")
+						.click-type-slider__img-wrapper 
+							img(src="https://hhcdn.ru/file/17547486.png")
+					.swiper-slide.click-type-slider-slide
+						.click-type-slider__content 
+							.click-type-slider__title Click start
+							.click-type-slider__text 
+								p Первое и единственное платёжное приложение, созданное специально для детей. Приложение основано на работе электронного кашелька, и позволяет детям пользоваться им без открытия банковской карты.
+							.click-type-slider__control 
+								.click-type-slider__pagination
+								.slider-arrows.click-type-slider-arrows
+									.slider-arrow.slider-arrow--prev.click-type-slider-arrow-prev
+										+icon("arrow-left", "slider-arrow__icon")
+									.slider-arrow.slider-arrow--next.click-type-slider-arrow-next
+										+icon("arrow-right", "slider-arrow__icon")
+						.click-type-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301108.png")
+					.swiper-slide.click-type-slider-slide
+						.click-type-slider__content 
+							.click-type-slider__title Click market
+							.click-type-slider__text 
+								p Онлайн-магазин фирменной продукции <br> компании. Единая интеграция всех интерфейсов <br> позволяет пользователям Click оплачивать <br> товары без дополнительной регистрации.
+							.click-type-slider__list На сайте представлен:
+								p - текстиль
+								p - кожаные изделия
+								p - аксессуары
+								p - электроника
+								p - сувенирная продукция
+							.click-type-slider__control 
+								.click-type-slider__pagination
+								.slider-arrows.click-type-slider-arrows
+									.slider-arrow.slider-arrow--prev.click-type-slider-arrow-prev
+										+icon("arrow-left", "slider-arrow__icon")
+									.slider-arrow.slider-arrow--next.click-type-slider-arrow-next
+										+icon("arrow-right", "slider-arrow__icon")
+						.click-type-slider__img-wrapper.click-type-slider__img-wrapper--last 
+							img(src="https://hhcdn.ru/ichameleon/301107.png")
+
+	<!-- END CLICK-TYPE -->
+
+	<!-- START CLICK-LIFE -->
+	.section.click-life-slider#life
+		.click-life-slider__bg-img
+			img(src="https://hhcdn.ru/ichameleon/301102.png")
+		.container
+			.title.title--life Жизнь в Click
+			.click-life-slider__subtitle Click – это больше чем просто работа. Выбирай активности по интересам: будь активным, общайся, делись,  веселись.
+			.swiper-container.click-life-slider__inner 
+				.swiper-wrapper
+					.swiper-slide.click-life-slider-slide
+						.click-life-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301103.jpg")
+						.click-life-slider__content 
+							.click-life-slider__title Click Day – традиция удивлять!
+							.click-life-slider__text 
+								p Click day это одно из самых крутых событий в нашей компании. В этот день мы празднуем День рождения компании, рассказываем нашим пользователям о новинках и устраиваем торжество таких масштабов, что об этом слышит вся страна!
+							.click-life-slider__control 
+								.click-life-slider__pagination
+								.slider-arrows.click-life-slider-arrows
+									.slider-arrow.slider-arrow--prev.click-life-slider-arrow-prev
+										+icon("arrow-left", "slider-arrow__icon")
+									.slider-arrow.slider-arrow--next.click-life-slider-arrow-next
+										+icon("arrow-right", "slider-arrow__icon")
+					.swiper-slide.click-life-slider-slide
+						.click-life-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301105.jpg")
+						.click-life-slider__content 
+							.click-life-slider__title Развивайся вместе с нами
+							.click-life-slider__text 
+								p Наши сотрудники – наш основной актив. По этой причине мы уделяем большое внимание всестороннему развитию каждого сотрудника. Мы проводим внутренние тренинги не только для совершенствования профессиональных качеств, но и развития личностных. Для поддержания физической формы у нас есть тренажерный зал.
+							.click-life-slider__control 
+								.click-life-slider__pagination
+								.slider-arrows.click-life-slider-arrows
+									.slider-arrow.slider-arrow--prev.click-life-slider-arrow-prev
+										+icon("arrow-left", "slider-arrow__icon")
+									.slider-arrow.slider-arrow--next.click-life-slider-arrow-next
+										+icon("arrow-right", "slider-arrow__icon")
+					.swiper-slide.click-life-slider-slide
+						.click-life-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301104.jpg")
+						.click-life-slider__content 
+							.click-life-slider__title Проводим время вместе
+							.click-life-slider__text 
+								p По праздникам мы, разумеется, отдыхаем. Все крупные праздники отмечаются в компании с большим размахом. Здесь вам обеспечены веселье, вкусняшки и отменное настроение. Для укрепления командного духа, мы регулярно проводим тимбилдинги.
+							.click-life-slider__control 
+								.click-life-slider__pagination
+								.slider-arrows.click-life-slider-arrows
+									.slider-arrow.slider-arrow--prev.click-life-slider-arrow-prev
+										+icon("arrow-left", "slider-arrow__icon")
+									.slider-arrow.slider-arrow--next.click-life-slider-arrow-next
+										+icon("arrow-right", "slider-arrow__icon")
+					.swiper-slide.click-life-slider-slide
+						.click-life-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301106.jpg")
+						.click-life-slider__content 
+							.click-life-slider__title Click творит добро
+							.click-life-slider__text 
+								p Благотворительность – часть нашей корпоративной культуры. Click регулярно выступает организатором различных благотворительных акций или становится их спонсором.
+							.click-life-slider__control 
+								.click-life-slider__pagination
+								.slider-arrows.click-life-slider-arrows
+									.slider-arrow.slider-arrow--prev.click-life-slider-arrow-prev
+										+icon("arrow-left", "slider-arrow__icon")
+									.slider-arrow.slider-arrow--next.click-life-slider-arrow-next
+										+icon("arrow-right", "slider-arrow__icon")
+	<!-- END CLICK-LIFE -->
+
+	<!-- START GALLERY-SLIDER -->
+	.section.section--medium-pt.gallery-slider
+		.container 
+			.swiper-container.gallery-slider-wrapper 
+				.swiper-wrapper
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301121.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301114.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301111.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301109.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301110.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301119.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301112.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301118.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301120.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301115.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301113.jpg")
+					.swiper-slide.gallery-slider-slide
+						.gallery-slider__img-wrapper 
+							img(src="https://hhcdn.ru/ichameleon/301117.jpg")
+			.slider-arrows.gallery-slider__arrows
+				.slider-arrow.slider-arrow--prev.gallery-slider-arrow-prev
+					+icon("left-arrow", "slider-arrow__icon")
+				.slider-arrow.slider-arrow--next.gallery-slider-arrow-next
+					+icon("right-arrow", "slider-arrow__icon")
+			.gallery-slider__pagination
+				span.swiper-pagination-bullet
+		.footer__btn-wrapper 
+			a.footer__btn(href="https://click.uz/ru" target="_blank") click.uz
+	<!-- END GALLERY-SLIDER -->
